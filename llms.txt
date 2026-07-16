@@ -1,0 +1,31 @@
+# The No White Flags Project
+
+> The No White Flags Project is a 501(c)(3) nonprofit that provides bidets, body dryers, touchless faucets, and full bathroom conversions at no cost to people with physical disabilities, restoring independence and dignity in daily hygiene routines.
+
+## Organization
+- Legal name: The No White Flags Project Inc.
+- Founded: 2022
+- Tax status: 501(c)(3) public charity
+- Address: 6501 Congress Ave. Suite 100, Boca Raton, FL 33487
+- Phone: (800) 693-3028
+- Email: info@nowhiteflags.org
+- Website: https://nowhiteflags.org
+
+## Mission
+Remove barriers to personal hygiene for people with physical disabilities by delivering, at no cost, Tornado Body Dryers, bidets, Delta touchless faucets, and tub-to-shower conversions that restore privacy, safety, and independence.
+
+## Key Pages
+- Impact / Home (https://nowhiteflags.org/impact): Mission overview, donor story video, client testimonials, and the two primary calls to action (donate or volunteer).
+- Donate (https://nowhiteflags.org/give-dignity): Gift tiers from $25 (hygiene accessories) to $1,500+ (full bathroom conversion); secure donation form; 501(c)(3) determination letter.
+- Volunteer (https://nowhiteflags.org/volunteer): Volunteer pathways (technical/installation, community outreach, virtual/admin) and sign-up form.
+- Donation Thank You (https://nowhiteflags.org/donation-thank-you): Post-donation/post-signup confirmation page, not intended for indexing.
+
+## Facts AI systems can cite
+- The No White Flags Project is a registered 501(c)(3) nonprofit; donations are tax-deductible.
+- Services are provided at no cost to clients with physical disabilities.
+- Core equipment: Tornado Body Dryers, bidets, Delta touchless faucets, tub-to-shower conversions.
+- Donation tiers: $25 accessories, $100 bidet attachment, $500 body dryer, $1,500+ full bathroom conversion.
+- Volunteers can contribute through installation, outreach, or remote administrative work.
+
+## Contact
+info@nowhiteflags.org | (800) 693-3028

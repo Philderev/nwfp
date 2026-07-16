@@ -1,0 +1,17 @@
+{
+  "name": "The No White Flags Project",
+  "short_name": "No White Flags",
+  "description": "Restoring dignity and independence through accessible bathroom equipment.",
+  "start_url": "./Hero-Landing.html",
+  "display": "standalone",
+  "background_color": "#F7FAFB",
+  "theme_color": "#10263B",
+  "icons": [
+    {
+      "src": "./assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

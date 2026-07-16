@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /donation-thank-you
+
+Sitemap: https://nowhiteflags.org/sitemap.xml
