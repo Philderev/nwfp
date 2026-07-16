@@ -51,6 +51,15 @@
   a:hover{color:#A61925;}
   input:focus,select:focus{outline:none;border-color:#C41F2B !important;box-shadow:0 0 0 3px rgba(196,31,43,0.1);}
   @media (max-width:1100px){.site-header{padding-left:20px !important;padding-right:20px !important;}}
+  @media (max-width:600px){
+    .site-header{grid-template-columns:1fr auto !important;grid-template-areas:"logo primary" "social social";padding:10px 16px 9px !important;row-gap:9px !important;}
+    .site-header>nav:first-child{grid-area:social;justify-self:stretch !important;justify-content:center;border-top:1px solid #E2E8EC;padding-top:9px;gap:14px !important;}
+    .site-header>a{grid-area:logo;justify-self:start !important;}
+    .site-header>a img{transform:scale(1.08) !important;}
+    .site-header>nav:last-child{grid-area:primary;justify-self:end !important;gap:0 !important;}
+    .site-header>nav:last-child>a:first-child{display:none !important;}
+    .site-header>nav:last-child>a:last-child{padding:10px 18px !important;font-size:14px !important;}
+  }
 </style>
 <script src="./image-slot.js"></script>
 </helmet>
@@ -103,24 +112,29 @@
 </section>
 
 <section aria-labelledby="signup-heading" style="max-width:640px;margin:0 auto;padding:24px clamp(20px,5vw,48px) 88px;width:100%;box-sizing:border-box">
-  <div style="background:white;border:1px solid #E2E8EC;border-radius:20px;padding:clamp(24px,6vw,40px);box-shadow:0 8px 28px rgba(16,38,59,0.07)">
+  <form action="https://formsubmit.co/info@nowhiteflags.org" method="POST" style="background:white;border:1px solid #E2E8EC;border-radius:20px;padding:clamp(24px,6vw,40px);box-shadow:0 8px 28px rgba(16,38,59,0.07)">
+    <input type="hidden" name="_subject" value="New No White Flags Volunteer Application">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://nowhiteflags.org/donation-thank-you?from=volunteer">
+    <input type="hidden" name="_url" value="https://nowhiteflags.org/volunteer">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
     <h2 id="signup-heading" style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#10263B;margin:0 0 24px;font-weight:600">Volunteer Sign-Up</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:12px">
-      <input type="text" placeholder="First Name" aria-label="First name" value="{{ firstName }}" onChange="{{ setFirstName }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
-      <input type="text" placeholder="Last Name" aria-label="Last name" value="{{ lastName }}" onChange="{{ setLastName }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
+      <input type="text" name="First Name" placeholder="First Name" aria-label="First name" value="{{ firstName }}" onChange="{{ setFirstName }}" required style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
+      <input type="text" name="Last Name" placeholder="Last Name" aria-label="Last name" value="{{ lastName }}" onChange="{{ setLastName }}" required style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
     </div>
-    <input type="email" placeholder="Email" aria-label="Email address" value="{{ email }}" onChange="{{ setEmail }}" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:12px;transition:border-color .15s"></input>
+    <input type="email" name="email" placeholder="Email" aria-label="Email address" value="{{ email }}" onChange="{{ setEmail }}" required style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:12px;transition:border-color .15s"></input>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:12px">
-      <input type="tel" placeholder="Phone" aria-label="Phone number" value="{{ phone }}" onChange="{{ setPhone }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
-      <input type="text" placeholder="Zip Code" aria-label="Zip code" value="{{ zip }}" onChange="{{ setZip }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
+      <input type="tel" name="Phone" placeholder="Phone" aria-label="Phone number" value="{{ phone }}" onChange="{{ setPhone }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
+      <input type="text" name="Zip Code" placeholder="Zip Code" aria-label="Zip code" value="{{ zip }}" onChange="{{ setZip }}" style="padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;transition:border-color .15s"></input>
     </div>
-    <select value="{{ interest }}" onChange="{{ setInterest }}" aria-label="Area of interest" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:24px;background:white;transition:border-color .15s">
+    <select name="Area of Interest" value="{{ interest }}" onChange="{{ setInterest }}" aria-label="Area of interest" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #D3DEE4;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:24px;background:white;transition:border-color .15s">
       <sc-for list="{{ interestOptions }}" as="opt" hint-placeholder-count="4">
         <option value="{{ opt }}">{{ opt }}</option>
       </sc-for>
     </select>
-    <button onClick="{{ submit }}" disabled="{{ submitDisabled }}" style="width:100%;background:{{ submitBg }};color:white;padding:16px;border:1.5px solid transparent;border-radius:9px;font-weight:700;font-size:16px;cursor:pointer;font-family:inherit;box-shadow:{{ submitShadow }};transition:all .18s" style-hover="background:white;color:{{ submitHoverBg }};border-color:{{ submitHoverBg }};box-shadow:none">Join Our Volunteers →</button>
-  </div>
+    <button type="submit" disabled="{{ submitDisabled }}" style="width:100%;background:{{ submitBg }};color:white;padding:16px;border:1.5px solid transparent;border-radius:9px;font-weight:700;font-size:16px;cursor:pointer;font-family:inherit;box-shadow:{{ submitShadow }};transition:all .18s" style-hover="background:white;color:{{ submitHoverBg }};border-color:{{ submitHoverBg }};box-shadow:none">Join Our Volunteers →</button>
+  </form>
 </section>
 </main>
 
@@ -160,18 +174,7 @@ class Component extends DCLogic {
       submitDisabled: !canSubmit,
       submitBg: '#022D45',
       submitHoverBg: '#022D45',
-      submitShadow: canSubmit ? '0 2px 8px rgba(2,45,69,.25)' : 'none',
-      submit: () => {
-        if (!canSubmit) return;
-        const application = {
-          firstName: this.state.firstName.trim(), lastName: this.state.lastName.trim(),
-          email: this.state.email.trim(), phone: this.state.phone.trim(),
-          zip: this.state.zip.trim(), interest: this.state.interest,
-          submittedAt: new Date().toISOString()
-        };
-        localStorage.setItem('nwf-volunteer-application', JSON.stringify(application));
-        window.location.href = './donation-thank-yo.html?from=volunteer';
-      }
+      submitShadow: canSubmit ? '0 2px 8px rgba(2,45,69,.25)' : 'none'
     };
   }
 }
