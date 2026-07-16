@@ -158,8 +158,8 @@ class Component extends DCLogic {
       setZip: (e) => this.setState({ zip: e.target.value }),
       setInterest: (e) => this.setState({ interest: e.target.value }),
       submitDisabled: !canSubmit,
-      submitBg: canSubmit ? '#022D45' : '#C7D0D6',
-      submitHoverBg: canSubmit ? '#022D45' : '#C7D0D6',
+      submitBg: '#022D45',
+      submitHoverBg: '#022D45',
       submitShadow: canSubmit ? '0 2px 8px rgba(2,45,69,.25)' : 'none',
       submit: () => {
         if (!canSubmit) return;
